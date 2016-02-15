@@ -1,0 +1,45 @@
+.screen-reader-text {
+	position: absolute;
+	left: -9999px;
+	top: -9999px
+}
+
+.bordered {
+	border:1px rgba(0,0,0,.05) solid;
+}
+
+.borderedTop {
+	border-top:1px rgba(0,0,0,.05) solid;
+}
+
+.borderedBottom {
+	border-bottom: 1px rgba(0,0,0,.05) solid;
+}
+
+.row {
+	padding-left:30px;
+	padding-right:30px;
+}
+
+@media (max-width:768px) {
+	.row {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+}
+
+.middotDivider {
+    padding-left: 0.45em;
+    padding-right: 0.45em;
+    &:after{
+    	content: "·";
+    }
+}
+
+.svgIcon{
+	vertical-align: middle;
+}
+
+.wp-caption{
+	max-width: 100%;
+}

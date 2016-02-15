@@ -1,0 +1,45 @@
+.button{
+	display: inline-block;
+	position: relative;
+	height: 37px;
+	padding: 0 16px;
+	color: rgba(0,0,0,0.44);
+	background: rgba(0,0,0,0);
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	.bordered;
+	vertical-align: bottom;
+	white-space: nowrap;
+	text-rendering: auto;
+	box-sizing: border-box;
+	border-radius: 999em;
+	&--chromeless{
+		border:0;
+	}
+	& > &-defaultState, &.is-active > &-activeState {
+    	display: inline;
+	}
+	&.is-active > &-defaultState, & > &-activeState {
+    	display: none;
+	}
+	&--small{
+		height: 32px;
+		line-height: 31px;
+		padding: 0 14px;
+		font-size: 12px;
+		&:hover{
+			color:rgba(0,0,0,0.6);
+			border-color:rgba(0,0,0,0.15)
+		}
+	}
+	&--primary,&.is-active{
+		color:#9c6;
+		border-color:#9c6;
+		.svgIcon{
+			fill:#9c6;
+			margin-right: 4px;
+		}
+	}
+}

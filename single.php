@@ -1,15 +1,6 @@
-<?php
-/**
- * The template for displaying all single posts and attachments
- *
- * @package Bigfa
- * @since Angela 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
-
-    <div id="primary" class="angelaContainer angelaBody">
-        <div>
+    <div class="angelaBody">
             <?php if ( have_posts() ) : ?>
 
             <?php
@@ -17,10 +8,9 @@ get_header(); ?>
             while ( have_posts() ) : the_post();
                 ?>
 
-                <?php get_template_part( 'template-parts/content', 'single' );?>
+                <?php get_template_part( 'content', 'single' );?>
                 <?php comments_template(); ?>
             <?php endwhile;?>
-        </div>
         <?php
         endif;
         ?>

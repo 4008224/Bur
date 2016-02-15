@@ -14,14 +14,14 @@
  */
 
 get_header(); ?>
-    <div id="primary" class="angelaContainer angelaBody">
+    <div class="angelaBody">
         <div class="postlists">
             <?php if ( have_posts() ) : ?>
             <?php
             // Start the loop.
             while ( have_posts() ) : the_post();
                 ?>
-                <?php	get_template_part( 'template-parts/content', get_post_format() );?>
+                <?php get_template_part( 'content', 'home' );?>
             <?php endwhile;?>
 
         </div><?php echo tg_get_adjacent_posts_link();?>

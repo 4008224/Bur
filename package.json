@@ -1,0 +1,31 @@
+{
+  "name": "bur",
+  "version": "1.0.0",
+  "description": "mobile wordpress theme",
+  "main": " ",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigfa/Bur.git"
+  },
+  "keywords": [
+    "wordpress"
+  ],
+  "author": "bigfa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bigfa/Bur/issues"
+  },
+  "homepage": "https://github.com/bigfa/Bur#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.5",
+    "gulp-uglify": "^1.5.1"
+  }
+}

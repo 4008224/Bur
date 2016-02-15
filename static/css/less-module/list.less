@@ -1,0 +1,87 @@
+.list--collection{
+	padding:40px 0;
+}
+.list{
+	padding:15px 0;
+	position:relative;
+	overflow:hidden;
+	&--borderedBottom{
+		.borderedBottom;
+	}
+	&--borderedBottom:last-child{
+		border-bottom: 0;
+	}
+	&-avatar{
+		float:left;
+		margin-right: 10px;
+		margin-top: 3px;
+	}
+	&-title{
+		font-size: 14px;
+		font-weight: 700;
+	}
+	&-description {
+		font-size: 12px;
+		color:rgba(0,0,0,0.44);
+	}
+	&-action{
+		position:absolute;
+		right:0;
+		top:14px;
+	}
+}
+
+.list--withIcon .button--circle {
+	float: left;
+	width: 40px;
+	height: 40px;
+	line-height: 1;
+	background-color: rgba(255,255,255,0.97);
+	border-color: rgba(0,0,0,0.05)
+}
+
+.list--withIcon .button--circle:hover,.list--withIcon .button--circle:focus {
+	border-color: rgba(0,0,0,0.15)
+}
+.list--withIcon .list-itemInfo {
+	margin-left: 55px;
+}
+.list--withIcon {
+		.list-itemInfo{
+			.borderedBottom;
+			padding-bottom: 18px;
+		}
+	}
+.list-item {
+	border-top: 1px solid rgba(255,255,255,0.2);
+	padding: 40px 0 35px;
+	.list--withIcon &{
+		padding:0;
+		border:0;
+		margin-top: 18px;
+		line-height: 1.4;
+	}
+	
+}
+
+.list--withIcon .list-itemTitle {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    max-width: 96%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.list-itemDescription {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+
+.list--withIcon .list-index{
+	color:rgba(0,0,0,0.8);
+	font-size: 12px;
+	font-weight: 700;
+}
