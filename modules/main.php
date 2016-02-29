@@ -80,14 +80,14 @@ add_filter('get_avatar', 'get_ssl_avatar');
 
 function tg_get_adjacent_posts_link() {
     global $paged, $wp_query;
-
+    $max_page = '';
     if ( !$max_page )
         $max_page = $wp_query->max_num_pages;
     if ( $max_page < 2)
         return;
     if ( !$paged )
         $paged = 1;
-    $output = '<nav class="u-textAlignCenter fontSmooth posts-load-btn">';
+    $output = '<nav class="u-textAlignCenter posts-load-btn">';
 
     $nextpage = intval($paged) + 1;
     if ( !$max_page || $max_page >= $nextpage )

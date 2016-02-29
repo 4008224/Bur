@@ -1,6 +1,5 @@
 <?php get_header();?>
-    <div id="primary" class="angelaContainer angelaBody">
-        <header class="angelaArchive-header">
+        <header class="archive-header">
             <h1 class="page-title">
                 <?php
                 if ( is_category() ) :
@@ -41,6 +40,4 @@
         </div>
         <?php echo tg_get_adjacent_posts_link();?>
         <?php endif;?>
-
-    </div><!-- .content-area -->
 <?php get_footer();?>
