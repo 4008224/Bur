@@ -1,5 +1,5 @@
 <?php get_header();?>
-    <div class="error-page angelaContainer v-textAlignCenter">
-        <i class="icon-404cuowu iconfont"></i>
+    <div class="error-page">
+        没有相关内容。
     </div>
 <?php get_footer();?>

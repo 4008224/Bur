@@ -1,6 +1,6 @@
 <?php
 
-function angela_title( $title, $sep ) {
+function bur_title( $title, $sep ) {
     global $paged, $page, $wp_query,$post;
 
     if ( is_feed() )
@@ -16,23 +16,16 @@ function angela_title( $title, $sep ) {
         $title = "第" .max( $paged, $page ) ."页 ". $sep . " " . $title;
     return $title;
 }
-add_filter( 'wp_title', 'angela_title', 10, 2 );
+add_filter( 'wp_title', 'bur_title', 10, 2 );
 
-function angela_scripts() {
 
-    // Load our main stylesheet.
-    wp_enqueue_style( 'angela-style', get_bloginfo('template_directory') . '/static/css/bundle.css' );
-    wp_enqueue_script( 'global', get_bloginfo('template_directory') . '/static/js/global.js' , array(), '1.0.0', false);
-    wp_localize_script( 'global', 'Angela', array(
-        "comment" => get_bloginfo('template_directory') . '/static/js/comment.js',
-        "ajax" => admin_url() . "admin-ajax.php",
-        "loading" =>get_bloginfo('template_directory') . '/static/img/loading.gif',
-        "error" => get_bloginfo('template_directory') . '/static/img/no.gif'
-    ));
+function bur_enqueue_scripts() {
+    wp_enqueue_style( 'bur-style', get_bloginfo('template_directory') . '/build/css/app.css' );
 }
-add_action( 'wp_enqueue_scripts', 'angela_scripts' );
+add_action( 'wp_enqueue_scripts', 'bur_enqueue_scripts' );
 
-function angela_get_background_image($post_id){
+
+function bur_get_background_image($post_id){
     if( has_post_thumbnail($post_id) ){
         $timthumb_src = wp_get_attachment_image_src(get_post_thumbnail_id($post_id),'full');
         $output = $timthumb_src[0];
@@ -51,7 +44,8 @@ function angela_get_background_image($post_id){
     return $output;
 }
 
-function angela_is_has_image($post_id){
+
+function bur_is_has_image($post_id){
     static $has_image;
     global $post;
     if( has_post_thumbnail($post_id) ){
@@ -72,13 +66,14 @@ function angela_is_has_image($post_id){
 }
 
 
-function get_ssl_avatar($avatar) {
+function bur_get_ssl_avatar($avatar) {
     $avatar = str_replace(array("www.gravatar.com","0.gravatar.com","1.gravatar.com","2.gravatar.com"),"secure.gravatar.com",$avatar);
     return $avatar;
 }
-add_filter('get_avatar', 'get_ssl_avatar');
+add_filter('get_avatar', 'bur_get_ssl_avatar');
 
-function tg_get_adjacent_posts_link() {
+
+function bur_get_adjacent_posts_link() {
     global $paged, $wp_query;
     $max_page = '';
     if ( !$max_page )

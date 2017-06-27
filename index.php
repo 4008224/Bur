@@ -1,12 +1,10 @@
 <?php get_header(); ?>
-    <div class="angelaBody">
-        <div class="postlists">
+        <div class="post-list">
             <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post();?>
-                <?php get_template_part( 'content', 'home' );?>
+                <?php get_template_part( 'template-parts/content', 'home' );?>
             <?php endwhile;?>
         </div>
-        <?php echo tg_get_adjacent_posts_link();?>
+        <?php echo bur_get_adjacent_posts_link();?>
         <?php endif; ?>
-    </div>
 <?php get_footer();?>
